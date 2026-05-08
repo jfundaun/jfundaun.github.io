@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joel Fundaun</title>
+  <!-- Bootstrap 5 (loaded from CDN — no installation needed) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================================================
+       NAVIGATION BAR
+       "active" marks the current page.
+       Copy this exact navbar block into every page,
+       then move "active" to the correct link.
+  ================================================= -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Joel Fundaun</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teaching.html">Teaching</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       MAIN CONTENT
+  ================================================= -->
+  <main>
+    <div class="container py-5">
+      <div class="row g-5 align-items-start">
+
+        <!-- LEFT COLUMN: Photo + Contact info -->
+        <div class="col-lg-4">
+
+          <!-- PHOTO
+               Once you have a headshot:
+               1. Save it as assets/photo.jpg
+               2. Delete the .photo-placeholder div below
+               3. Uncomment the <img> tag -->
+          <!-- <img src="assets/photo.jpg" alt="Joel Fundaun" class="profile-photo mb-4"> -->
+          <div class="photo-placeholder mb-4">
+            Photo<br>coming soon
+          </div>
+
+          <h1 class="h5 mb-0 fw-semibold">Joel Fundaun</h1>
+          <p class="text-muted mb-3" style="font-size:0.9rem;">DPT, DPhil</p>
+
+          <p style="font-size:0.9rem; line-height:1.6;" class="mb-3">
+            Postdoctoral Research Fellow<br>
+            Department of Anesthesiology,<br>
+            Perioperative and Pain Medicine<br>
+            Stanford University
+          </p>
+
+          <div class="d-flex flex-column gap-1" style="font-size:0.9rem;">
+            <a href="mailto:jfundaun@stanford.edu">jfundaun@stanford.edu</a>
+            <a href="https://scholar.google.com/citations?user=I1IXyEMAAAAJ"
+               target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Bio -->
+        <div class="col-lg-8">
+
+          <p>I am a Postdoctoral Research Fellow in the Department of Anesthesiology, Perioperative and Pain Medicine at Stanford University, supported by an NIH/NIDA T32 Fellowship in Interdisciplinary Research Training in Pain and Substance Use Disorders. I trained as a Doctor of Physical Therapy at Regis University and completed an Orthopaedic Physical Therapy Residency at Northwestern University–Shirley Ryan AbilityLab. I received my DPhil in Clinical Neurosciences from the University of Oxford, where my doctoral research identified novel signs of peripheral nerve injury and neuropathic pain in whiplash-associated disorders. Alongside my research, I continue to practice clinically as a physical therapist at the Stanford Pain Management Center.</p>
+
+          <p>My research focuses on the mechanisms and prognosis of neuropathic pain following traumatic head and neck injuries — including whiplash, spinal cord injury, and related conditions. Using MRI, quantitative sensory testing, neurological assessment, and blood-based biomarkers, I investigate why some individuals develop chronic pain after injury while others recover, and work to translate these findings into better tools for clinical assessment and treatment.</p>
+
+          <p>My research has been supported by NIH, the Wellcome Trust, the Medical Research Council, and Versus Arthritis, and has been published in <em>Brain</em>, <em>PAIN</em>, <em>JAMA Network Open</em>, and other peer-reviewed journals.</p>
+
+        </div><!-- /col -->
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================= -->
+  <footer class="border-top mt-5 py-4">
+    <div class="container">
+      <p class="mb-0 text-muted" style="font-size:0.85rem;">
+        © 2025 Joel Fundaun &middot; Stanford University
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript (needed for the mobile hamburger menu) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

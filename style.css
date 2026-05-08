@@ -1,0 +1,124 @@
+/* =====================================================
+   Joel Fundaun — Academic Website
+   Custom styles built on top of Bootstrap 5
+   ===================================================== */
+
+/* --- Color palette ---
+   Change --navy here to update the accent color site-wide */
+:root {
+  --navy: #1d3557;
+  --navy-hover: #2c4a7c;
+  --border: #e8e8e8;
+}
+
+/* --- Body typography --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* --- Links --- */
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--navy-hover);
+  text-decoration: underline;
+}
+
+/* --- Navbar --- */
+.navbar {
+  box-shadow: 0 1px 0 var(--border);
+}
+.navbar-brand {
+  font-weight: 600;
+  color: var(--navy) !important;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.nav-link {
+  color: #444 !important;
+  font-size: 0.95rem;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--navy) !important;
+}
+
+/* --- Profile photo --- */
+.profile-photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+/* Placeholder shown before you add your real photo */
+.photo-placeholder {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #f0f2f5;
+  border: 2px dashed #cdd0d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* --- Section divider headings (used on publications, teaching) --- */
+.year-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--navy);
+  display: inline-block;
+}
+
+/* --- Publication list items --- */
+.pub-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.pub-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.pub-item p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* --- Research theme blocks --- */
+.research-block {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.research-block:last-child {
+  border-bottom: none;
+}
+.research-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+/* --- Footer --- */
+footer {
+  background: #fafafa;
+  font-size: 0.85rem;
+  color: #888;
+}
