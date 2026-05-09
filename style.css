@@ -185,7 +185,7 @@ a:hover { color: var(--navy-mid); text-decoration: underline; }
 .pub-year-row:last-child { border-bottom: none; }
 
 .pub-year-label {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #1d3557;
   min-width: 4rem;
@@ -199,28 +199,28 @@ a:hover { color: var(--navy-mid); text-decoration: underline; }
 .pub-content { flex: 1; }
 
 .pub-title {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .pub-authors {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--muted);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 .pub-journal {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: #444;
   font-style: italic;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
   font-family: "Georgia", serif;
 }
 .pub-doi {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
