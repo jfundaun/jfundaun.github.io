@@ -5,7 +5,21 @@
 :root {
   --navy: #1d3557;
   --navy-hover: #2c4a7c;
-  --border: #ebebeb;
+  --navy-light: #e8eef5;
+  --border: #e4e4e4;
+}
+
+/* --- Top accent bar --- */
+body::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: var(--navy);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 /* --- Base --- */
@@ -13,12 +27,14 @@ body {
   font-family: "Georgia", serif;
   color: #1a1a1a;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.05rem;
   background: #fff;
+  padding-top: 4px;
 }
 
-/* Use a clean sans-serif for UI elements (nav, labels, meta) */
-nav, footer, .contact-links, .year-heading, .text-muted, h1, h2, h3 {
+/* Sans-serif for UI elements */
+nav, footer, .contact-links, .year-heading,
+.text-muted, h1, h2, h3, label, button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -34,26 +50,30 @@ a:hover {
 
 /* --- Navbar --- */
 .navbar {
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
-  box-shadow: 0 1px 0 var(--border);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 .navbar-brand {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--navy) !important;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
 }
 .nav-link {
   color: #555 !important;
   font-size: 0.9rem;
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
+  font-weight: 400;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  transition: color 0.15s;
 }
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--navy) !important;
+}
 .nav-link.active {
   color: var(--navy) !important;
+  font-weight: 600;
 }
 
 /* --- Profile photo --- */
@@ -64,41 +84,79 @@ a:hover {
   object-fit: cover;
   object-position: center top;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 2px 16px rgba(29, 53, 87, 0.15);
 }
 @media (min-width: 992px) {
-  .profile-photo {
-    margin: 0 0 1rem 0;
-  }
+  .profile-photo { margin: 0 0 1.25rem 0; }
 }
 
-/* --- Contact links (left column) --- */
+/* --- Left column name block --- */
+.name-block h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.1rem;
+}
+.name-block .credentials {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Contact links --- */
+.contact-links {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 0.25rem;
+}
 .contact-links a {
   font-size: 0.85rem;
   color: #444;
+  display: block;
+  padding: 0.15rem 0;
 }
 .contact-links a:hover {
   color: var(--navy);
+  text-decoration: none;
 }
 
-/* --- Section year headings --- */
-.year-heading {
-  font-size: 0.75rem;
+/* --- Bio text --- */
+.bio-text p {
+  margin-bottom: 1.1rem;
+  color: #222;
+}
+.bio-text p:last-child { margin-bottom: 0; }
+
+/* --- Page headings --- */
+.page-heading {
+  font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--navy);
+}
+
+/* --- Year / section dividers --- */
+.year-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--navy);
-  margin-top: 2rem;
-  margin-bottom: 0.9rem;
-  padding-bottom: 0.35rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1.5px solid var(--navy);
   display: inline-block;
 }
 
 /* --- Publication items --- */
 .pub-item {
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--border);
 }
 .pub-item:last-child {
@@ -107,8 +165,9 @@ a:hover {
 }
 .pub-item p {
   margin-bottom: 0;
-  font-size: 0.93rem;
-  line-height: 1.65;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /* --- Research blocks --- */
@@ -116,31 +175,61 @@ a:hover {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
 }
-.research-block:last-child {
-  border-bottom: none;
-}
+.research-block:first-of-type { padding-top: 0; }
+.research-block:last-child { border-bottom: none; }
 .research-block h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.research-block h3::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--navy);
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
-/* --- Page headings --- */
-h2.page-title {
-  font-size: 1.15rem;
+/* --- Teaching blocks (reuse research-block style) --- */
+.teaching-block {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.teaching-block:first-of-type { padding-top: 0; }
+.teaching-block:last-child { border-bottom: none; }
+.teaching-block h3 {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 1.25rem;
-}
-
-/* --- Bio paragraphs — slightly tighter --- */
-main p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 /* --- Footer --- */
 footer {
-  background: #fafafa;
+  background: #f7f8fa;
+  border-top: 1px solid var(--border) !important;
+}
+footer p {
+  font-size: 0.82rem;
+  color: #999;
+}
+
+/* --- Social icons --- */
+.social-icon {
+  font-size: 1.6rem;
+  color: #555;
+  transition: color 0.15s, transform 0.15s;
+  display: inline-block;
+  line-height: 1;
+}
+.social-icon:hover {
+  color: var(--navy);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
