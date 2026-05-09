@@ -1,202 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications — Joel Fundaun</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* =====================================================
+   Joel Fundaun — Academic Website
+   ===================================================== */
 
-  <!-- NAVIGATION -->
-  <nav class="navbar navbar-expand-lg bg-white sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Joel Fundaun</a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+:root {
+  --navy: #1d3557;
+  --navy-mid: #2c4a7c;
+  --navy-light: #e8eef5;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+  --muted: #666;
+}
 
-  <main>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-9">
+/* ---- Top accent bar ---- */
+body::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: var(--navy);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+}
 
-          <div class="d-flex align-items-baseline justify-content-between mb-1 flex-wrap gap-2">
-            <h2 class="h4 fw-semibold mb-0" style="color: var(--navy);">Publications</h2>
-            <a href="https://scholar.google.com/citations?user=I1IXyEMAAAAJ"
-               target="_blank" rel="noopener"
-               style="font-size:0.9rem;">Google Scholar ↗</a>
-          </div>
-          <p class="text-muted mb-4" style="font-size:0.9rem;">
-            *Contributed equally.
-          </p>
+/* ---- Base ---- */
+body {
+  font-family: "Georgia", serif;
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 1.08rem;
+  background: #fff;
+  padding-top: 5px;
+}
 
-          <!-- ======== 2026 ======== -->
-          <div class="year-heading">2026</div>
+/* Sans for UI */
+nav, footer, h1, h2, h3, h4,
+.contact-links, .year-label,
+.pub-meta, .credentials, label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
 
-          <div class="pub-item">
-            <p> <strong>Fundaun J</strong>, Kelleher E, Coxon L, et al. Serum neurofilament light chain in fibromyalgia: comparative evidence of neuronal injury across chronic pain conditions. <em>Pain Rep.</em> 2026;11(2):e1423. <a href="https://doi.org/10.1097/PR9.0000000000001423" target="_blank" rel="noopener">doi:10.1097/PR9.0000000000001423</a></p>
-          </div>
+/* ---- Links ---- */
+a { color: var(--navy); text-decoration: none; }
+a:hover { color: var(--navy-mid); text-decoration: underline; }
 
-          <div class="pub-item">
-            <p>*Ridehalgh C, <strong>*Fundaun J</strong>, Bremner S, et al. Temporal development of peripheral neuroinflammation in whiplash-associated disorder grade II and its role in chronicity. <em>Pain.</em> 2026;167(2):356-371. <a href="https://doi.org/10.1097/j.pain.0000000000003816" target="_blank" rel="noopener">doi:10.1097/j.pain.0000000000003816</a></p>
-          </div>
+/* ---- Navbar ---- */
+.navbar {
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+  background: #fff !important;
+}
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navy) !important;
+  letter-spacing: -0.03em;
+}
+.nav-link {
+  color: #555 !important;
+  font-size: 0.95rem;
+  font-weight: 400;
+  padding: 0.25rem 1rem !important;
+  transition: color 0.15s;
+}
+.nav-link:hover { color: var(--navy) !important; }
+.nav-link.active {
+  color: var(--navy) !important;
+  font-weight: 600;
+}
 
-          <div class="pub-item">
-            <p>Ridehalgh C, <strong>Fundaun J</strong>, Farrell S. Neuro-immune contributors to persistent musculoskeletal pain: from mechanisms to clinical assessment and management. <em>Musculoskelet Sci Pract.</em> 2026;81:103468. <a href="https://doi.org/10.1016/j.msksp.2025.103468" target="_blank" rel="noopener">doi:10.1016/j.msksp.2025.103468</a></p>
-          </div>
+/* ---- Profile photo ---- */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 24px rgba(29, 53, 87, 0.18);
+}
+@media (min-width: 992px) {
+  .profile-photo { margin: 0 0 1.5rem 0; }
+}
 
-          <!-- ======== 2025 ======== -->
-          <div class="year-heading">2025</div>
+/* ---- Name block ---- */
+.name-block h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+.credentials {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+}
 
-          <div class="pub-item">
-            <p>*<strong>Fundaun J</strong>, *Ridehalgh C, Koushesh S, et al. The presence and prognosis of nerve pathology following whiplash injury: a prospective cohort study. <em>Brain.</em> 2025;148(9):3392-3406. <a href="https://doi.org/10.1093/brain/awaf088" target="_blank" rel="noopener">doi:10.1093/brain/awaf088</a></p>
-          </div>
+/* ---- Contact / social ---- */
+.contact-block {
+  border-top: 1px solid var(--border);
+  padding-top: 1.1rem;
+}
+.contact-block .email-link {
+  font-size: 0.9rem;
+  color: #444;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.contact-block .email-link:hover { color: var(--navy); text-decoration: none; }
 
-          <div class="pub-item">
-            <p>*Ridehalgh C, <strong>*Fundaun J</strong>, Bremner S, et al. Evidence for peripheral neuroinflammation after acute whiplash. <em>Pain.</em> 2025;166(10):2285-2299. <a href="https://doi.org/10.1097/j.pain.0000000000003560" target="_blank" rel="noopener">doi:10.1097/j.pain.0000000000003560</a></p>
-          </div>
+/* Social icons — large and clear */
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.social-icons a {
+  font-size: 2.2rem;
+  color: #555;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s, transform 0.15s;
+}
+.social-icons a:hover {
+  color: var(--navy);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
 
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Oliva V, Bédard S, et al. Automated segmentation of forearm muscles: clinical associations with hand function, muscle volume and intramuscular fat. <em>JCSM Commun.</em> 2025;8(2):e70015. <a href="https://doi.org/10.1002/rco2.70015" target="_blank" rel="noopener">doi:10.1002/rco2.70015</a></p>
-          </div>
+/* ---- Bio text ---- */
+.bio-text p {
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+.bio-text p:last-child { margin-bottom: 0; }
 
-          <!-- ======== Preprints ======== -->
-          <div class="year-heading">Preprints</div>
+/* ---- Page title (research, publications, teaching) ---- */
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+  line-height: 1.1;
+}
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
 
-          <div class="pub-item">
-            <p>Pfyffer D, Wang Y, Kaptan M, <strong>Fundaun J</strong>, et al. Differential encoding of noxious heat and self-reported pain along corticospinal networks: a simultaneous spinal cord-brain fMRI study. <em>bioRxiv.</em> 2025. <a href="https://doi.org/10.1101/2025.10.24.684476" target="_blank" rel="noopener">doi:10.1101/2025.10.24.684476</a></p>
-          </div>
+/* ---- Research blocks ---- */
+.research-block {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.research-block:first-of-type { padding-top: 0; }
+.research-block:last-child { border-bottom: none; }
+.research-block h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.65rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--navy);
+}
 
-          <!-- ======== 2023 ======== -->
-          <div class="year-heading">2023</div>
+/* ---- Publications ---- */
+.pub-year-group { margin-bottom: 1rem; }
 
-          <div class="pub-item">
-            <p>Matesanz-García L, Billerot C, <strong>Fundaun J</strong>, Schmid AB. Effect of type and dose of exercise on neuropathic pain after experimental sciatic nerve injury: a preclinical systematic review and meta-analysis. <em>J Pain.</em> 2023;24(6):921-938. <a href="https://doi.org/10.1016/j.jpain.2023.01.011" target="_blank" rel="noopener">doi:10.1016/j.jpain.2023.01.011</a></p>
-          </div>
+.pub-year-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub-year-row:last-child { border-bottom: none; }
 
-          <!-- ======== 2022 ======== -->
-          <div class="year-heading">2022</div>
+.pub-year-label {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #dde3eb;
+  min-width: 4rem;
+  text-align: right;
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -0.04em;
+  padding-top: 0.1rem;
+}
 
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Kolski M, Molina-Álvarez M, Baskozos G, Schmid AB. Types and concentrations of blood-based biomarkers in adults with peripheral neuropathies: a systematic review and meta-analysis. <em>JAMA Netw Open.</em> 2022;5(12):e2248593. <a href="https://doi.org/10.1001/jamanetworkopen.2022.48593" target="_blank" rel="noopener">doi:10.1001/jamanetworkopen.2022.48593</a></p>
-          </div>
+.pub-content { flex: 1; }
 
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Thomas ET, Schmid AB, Baskozos G. The power of integrating data: advancing pain research using meta-analysis. <em>Pain Rep.</em> 2022;7(6):e1038. <a href="https://doi.org/10.1097/PR9.0000000000001038" target="_blank" rel="noopener">doi:10.1097/PR9.0000000000001038</a></p>
-          </div>
+.pub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.pub-journal {
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 0.15rem;
+  font-family: "Georgia", serif;
+}
+.pub-doi {
+  font-size: 0.82rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
 
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Kolski M, Baskozos G, Dilley A, Sterling M, Schmid AB. Nerve pathology and neuropathic pain after whiplash injury: a systematic review and meta-analysis. <em>Pain.</em> 2022;163(7):e789-e811. <a href="https://doi.org/10.1097/j.pain.0000000000002509" target="_blank" rel="noopener">doi:10.1097/j.pain.0000000000002509</a></p>
-          </div>
+/* Section heading for presentations/engagement */
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--navy);
+}
 
-          <div class="pub-item">
-            <p>*Ridehalgh C, <strong>*Fundaun J</strong>, Bremner S, et al. Does peripheral neuroinflammation predict chronicity following whiplash injury? Protocol for a prospective cohort study. <em>BMJ Open.</em> 2022;12(12):e066021. <a href="https://doi.org/10.1136/bmjopen-2022-066021" target="_blank" rel="noopener">doi:10.1136/bmjopen-2022-066021</a></p>
-          </div>
+/* ---- Teaching ---- */
+.teaching-block {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.teaching-block:first-of-type { padding-top: 0; }
+.teaching-block:last-child { border-bottom: none; }
+.teaching-block h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.65rem;
+}
 
-          <!-- ======== 2021 ======== -->
-          <div class="year-heading">2021</div>
+/* ---- Footer ---- */
+footer {
+  background: #f5f7fa;
+  border-top: 1px solid var(--border) !important;
+}
+footer p {
+  font-size: 0.85rem;
+  color: #999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
 
-          <div class="pub-item">
-            <p>Schmid AB, <strong>Fundaun J</strong>, Tampin B. Entrapment neuropathies: a contemporary approach to pathophysiology, clinical assessment, and management [German version]. <em>Schmerz.</em> 2021;35(6):419-433. <a href="https://doi.org/10.1007/s00482-021-00584-z" target="_blank" rel="noopener">doi:10.1007/s00482-021-00584-z</a></p>
-          </div>
-
-          <!-- ======== 2020 ======== -->
-          <div class="year-heading">2020</div>
-
-          <div class="pub-item">
-            <p>Schmid AB, <strong>Fundaun J</strong>, Tampin B. Entrapment neuropathies: a contemporary approach to pathophysiology, clinical assessment, and management. <em>Pain Rep.</em> 2020;5(4):e829. <a href="https://doi.org/10.1097/PR9.0000000000000829" target="_blank" rel="noopener">doi:10.1097/PR9.0000000000000829</a></p>
-          </div>
-
-          <div class="pub-item">
-            <p>Elliott JM, Smith AC, Hoggarth MA, et al. Muscle fat infiltration following whiplash: a computed tomography and magnetic resonance imaging comparison. <em>PLoS One.</em> 2020;15(6):e0234061. <a href="https://doi.org/10.1371/journal.pone.0234061" target="_blank" rel="noopener">doi:10.1371/journal.pone.0234061</a></p>
-          </div>
-
-          <div class="pub-item">
-            <p>Elliott JM, Parrish TB, Walton DM, et al. Does overall cervical spine pathology relate to the clinical heterogeneity of chronic whiplash? <em>Am J Emerg Med.</em> 2020;38(5):869-873. <a href="https://doi.org/10.1016/j.ajem.2019.06.052" target="_blank" rel="noopener">doi:10.1016/j.ajem.2019.06.052</a></p>
-          </div>
-
-          <!-- ======== 2016 ======== -->
-          <div class="year-heading">2016</div>
-
-          <div class="pub-item">
-            <p>McPoil TG, Ford J, <strong>Fundaun J</strong>, et al. The use of a static measure to predict foot posture at midstance during walking. <em>Foot (Edinb).</em> 2016;28:47-53. <a href="https://doi.org/10.1016/j.foot.2016.09.001" target="_blank" rel="noopener">doi:10.1016/j.foot.2016.09.001</a></p>
-          </div>
-
-          <!-- ======== Selected Presentations ======== -->
-          <h2 class="h4 fw-semibold mt-5 mb-1" style="color: var(--navy);">Selected Presentations</h2>
-          <p class="text-muted mb-3" style="font-size:0.9rem;">Invited talks and conference abstracts (selected).</p>
-
-          <div class="year-heading">2025</div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Barry A, Baskozos G. Machine learning and dimensionality reduction in neuropathic pain research. <em>NeuPSIG Congress;</em> 2025. Workshop.</p>
-          </div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Falasinnu T, Pfyffer D, Mackey S, Weber K. Quantifying disparities in chronic pain after spinal cord injury: evaluating race, income, and education. <em>NeuPSIG Congress;</em> 2025. Poster.</p>
-          </div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, et al. Automated MRI-based quantification of forearm muscle health and associations with hand function. <em>ISMRM;</em> 2025, Honolulu. Poster.</p>
-          </div>
-
-          <div class="year-heading">2024</div>
-          <div class="pub-item">
-            <p>Ridehalgh C, <strong>Fundaun J</strong>, Farrell S. Neuroimmune contributions to persistent musculoskeletal pain: evidence and clinical implications. <em>World Conference of Musculoskeletal and Manual Physical Therapy — IFOMPT;</em> 2024, Switzerland. Symposium.</p>
-          </div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Ridehalgh C, Baskozos G, et al. Temporal patterns of nerve pathology after whiplash injury: results from a longitudinal cohort study. <em>IFOMPT;</em> 2024, Switzerland. Poster.</p>
-          </div>
-
-          <div class="year-heading">2022–2023</div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Kolski M, Molina-Álvarez M, Baskozos G, Schmid AB. Blood-based biomarkers of peripheral neuropathy: a systematic review and meta-analysis. <em>IASP World Congress;</em> 2022, Toronto. Poster.</p>
-          </div>
-          <div class="pub-item">
-            <p><strong>Fundaun J</strong>, Ridehalgh C, Baskozos G, et al. Acute nerve pathology and neuropathic pain after whiplash injury: preliminary cohort findings. <em>NeuPSIG Congress;</em> 2023. Poster.</p>
-          </div>
-
-          <!-- ======== Public Engagement ======== -->
-          <h2 class="h4 fw-semibold mt-5 mb-3" style="color: var(--navy);">Public Engagement</h2>
-
-          <div class="pub-item">
-            <p>Invited guest speaker. "Whiplash Isn't Just Neck Pain: What Clinicians Are Missing." <em>Modern Pain Podcast.</em></p>
-          </div>
-          <div class="pub-item">
-            <p>Invited commentary. "Whiplash Recovery." <em>The Times</em> (UK). October 15, 2024.</p>
-          </div>
-          <div class="pub-item">
-            <p>Invited guest speaker. "Discussing Whiplash Injuries for Physiotherapists." <em>Guida Galattica per Fisioterapisti</em> (YouTube).</p>
-          </div>
-          <div class="pub-item">
-            <p>Patient education video. "What is Sciatica?" Over 27,000 views on YouTube.</p>
-          </div>
-
-        </div><!-- /col -->
-      </div><!-- /row -->
-    </div><!-- /container -->
-  </main>
-
-  <footer class="border-top mt-5 py-4">
-    <div class="container">
-      <p class="mb-0 text-muted" style="font-size:0.85rem;">
-        © 2025 Joel Fundaun &middot; Stanford University
-      </p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+/* Small label variant for "Preprint" etc */
+.pub-year-label--small {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #bbb;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
