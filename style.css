@@ -4,232 +4,258 @@
 
 :root {
   --navy: #1d3557;
-  --navy-hover: #2c4a7c;
+  --navy-mid: #2c4a7c;
   --navy-light: #e8eef5;
-  --border: #e4e4e4;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+  --muted: #666;
 }
 
-/* --- Top accent bar --- */
+/* ---- Top accent bar ---- */
 body::before {
   content: '';
   display: block;
-  height: 4px;
+  height: 5px;
   background: var(--navy);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 9999;
 }
 
-/* --- Base --- */
+/* ---- Base ---- */
 body {
   font-family: "Georgia", serif;
-  color: #1a1a1a;
-  line-height: 1.8;
-  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 1.08rem;
   background: #fff;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
-/* Sans-serif for UI elements */
-nav, footer, .contact-links, .year-heading,
-.text-muted, h1, h2, h3, label, button {
+/* Sans for UI */
+nav, footer, h1, h2, h3, h4,
+.contact-links, .year-label,
+.pub-meta, .credentials, label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-/* --- Links --- */
-a {
-  color: var(--navy);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--navy-hover);
-  text-decoration: underline;
-}
+/* ---- Links ---- */
+a { color: var(--navy); text-decoration: none; }
+a:hover { color: var(--navy-mid); text-decoration: underline; }
 
-/* --- Navbar --- */
+/* ---- Navbar ---- */
 .navbar {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
   border-bottom: 1px solid var(--border);
+  background: #fff !important;
 }
 .navbar-brand {
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.25rem;
   color: var(--navy) !important;
-  font-size: 1.1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 .nav-link {
   color: #555 !important;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+  padding: 0.25rem 1rem !important;
   transition: color 0.15s;
 }
-.nav-link:hover {
-  color: var(--navy) !important;
-}
+.nav-link:hover { color: var(--navy) !important; }
 .nav-link.active {
   color: var(--navy) !important;
   font-weight: 600;
 }
 
-/* --- Profile photo --- */
+/* ---- Profile photo ---- */
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   display: block;
-  margin: 0 auto 1.25rem;
-  box-shadow: 0 2px 16px rgba(29, 53, 87, 0.15);
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 24px rgba(29, 53, 87, 0.18);
 }
 @media (min-width: 992px) {
-  .profile-photo { margin: 0 0 1.25rem 0; }
+  .profile-photo { margin: 0 0 1.5rem 0; }
 }
 
-/* --- Left column name block --- */
+/* ---- Name block ---- */
 .name-block h1 {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
 }
-.name-block .credentials {
-  font-size: 0.82rem;
-  color: #777;
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
+.credentials {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
 }
 
-/* --- Contact links --- */
-.contact-links {
+/* ---- Contact / social ---- */
+.contact-block {
   border-top: 1px solid var(--border);
-  padding-top: 1rem;
-  margin-top: 0.25rem;
+  padding-top: 1.1rem;
 }
-.contact-links a {
-  font-size: 0.85rem;
+.contact-block .email-link {
+  font-size: 0.9rem;
   color: #444;
   display: block;
-  padding: 0.15rem 0;
+  margin-bottom: 0.9rem;
 }
-.contact-links a:hover {
+.contact-block .email-link:hover { color: var(--navy); text-decoration: none; }
+
+/* Social icons — large and clear */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.social-icons a {
+  font-size: 2rem;
+  color: #555;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s, transform 0.15s;
+}
+.social-icons a:hover {
   color: var(--navy);
+  transform: translateY(-2px);
   text-decoration: none;
 }
 
-/* --- Bio text --- */
+/* ---- Bio text ---- */
 .bio-text p {
-  margin-bottom: 1.1rem;
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
   color: #222;
 }
 .bio-text p:last-child { margin-bottom: 0; }
 
-/* --- Page headings --- */
-.page-heading {
-  font-size: 1.3rem;
+/* ---- Page title (research, publications, teaching) ---- */
+.page-title {
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--navy);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+  line-height: 1.1;
 }
-
-/* --- Year / section dividers --- */
-.year-heading {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin-top: 2.25rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1.5px solid var(--navy);
-  display: inline-block;
-}
-
-/* --- Publication items --- */
-.pub-item {
-  margin-bottom: 0.9rem;
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid var(--border);
-}
-.pub-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-.pub-item p {
-  margin-bottom: 0;
-  font-size: 0.92rem;
-  line-height: 1.7;
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-/* --- Research blocks --- */
+/* ---- Research blocks ---- */
 .research-block {
-  padding: 1.5rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px solid var(--border);
 }
 .research-block:first-of-type { padding-top: 0; }
 .research-block:last-child { border-bottom: none; }
 .research-block h3 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--navy);
   margin-bottom: 0.65rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.research-block h3::before {
-  content: '';
-  display: inline-block;
-  width: 3px;
-  height: 1em;
-  background: var(--navy);
-  border-radius: 2px;
-  flex-shrink: 0;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--navy);
 }
 
-/* --- Teaching blocks (reuse research-block style) --- */
+/* ---- Publications ---- */
+.pub-year-group { margin-bottom: 1rem; }
+
+.pub-year-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub-year-row:last-child { border-bottom: none; }
+
+.pub-year-label {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #dde3eb;
+  min-width: 4rem;
+  text-align: right;
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -0.04em;
+  padding-top: 0.1rem;
+}
+
+.pub-content { flex: 1; }
+
+.pub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.pub-journal {
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 0.15rem;
+  font-family: "Georgia", serif;
+}
+.pub-doi {
+  font-size: 0.82rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Section heading for presentations/engagement */
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--navy);
+}
+
+/* ---- Teaching ---- */
 .teaching-block {
-  padding: 1.5rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px solid var(--border);
 }
 .teaching-block:first-of-type { padding-top: 0; }
 .teaching-block:last-child { border-bottom: none; }
 .teaching-block h3 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--navy);
   margin-bottom: 0.65rem;
 }
 
-/* --- Footer --- */
+/* ---- Footer ---- */
 footer {
-  background: #f7f8fa;
+  background: #f5f7fa;
   border-top: 1px solid var(--border) !important;
 }
 footer p {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #999;
-}
-
-/* --- Social icons --- */
-.social-icon {
-  font-size: 1.6rem;
-  color: #555;
-  transition: color 0.15s, transform 0.15s;
-  display: inline-block;
-  line-height: 1;
-}
-.social-icon:hover {
-  color: var(--navy);
-  transform: translateY(-2px);
-  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
