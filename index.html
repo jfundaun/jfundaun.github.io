@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joel Fundaun</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (LinkedIn icon) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Academicons (Google Scholar icon) -->
+  <link href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,25 +41,42 @@
 
         <!-- LEFT COLUMN -->
         <div class="col-lg-3 text-center text-lg-start">
-          <img src="fundaun_photo.jpeg" alt="Joel Fundaun" class="profile-photo mb-3">
+          <img src="fundaun_photo.jpeg" alt="Joel Fundaun" class="profile-photo">
 
-          <h1 class="h5 mb-0 fw-semibold">Joel Fundaun</h1>
-          <p class="text-muted mb-3" style="font-size:0.85rem; line-height:1.6;">
-            DPT, DPhil<br>
-            Postdoctoral Research Fellow<br>
-            Stanford University
-          </p>
+          <div class="name-block">
+            <h1>Joel Fundaun</h1>
+            <p class="credentials">
+              DPT, DPhil<br>
+              Postdoctoral Research Fellow<br>
+              Stanford University
+            </p>
+          </div>
 
-          <div class="d-flex flex-column gap-1 contact-links">
-            <a href="mailto:jfundaun@stanford.edu">jfundaun@stanford.edu</a>
-            <a href="https://scholar.google.com/citations?user=I1IXyEMAAAAJ"
-               target="_blank" rel="noopener">Google Scholar ↗</a>
+          <!-- Email as text, then icons for Scholar + LinkedIn -->
+          <div class="contact-links">
+            <a href="mailto:jfundaun@stanford.edu" class="d-block mb-2">
+              jfundaun@stanford.edu
+            </a>
+            <div class="d-flex gap-3 mt-1 justify-content-center justify-content-lg-start">
+              <a href="https://scholar.google.com/citations?user=I1IXyEMAAAAJ"
+                 target="_blank" rel="noopener"
+                 title="Google Scholar"
+                 class="social-icon">
+                <i class="ai ai-google-scholar-square"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/joel-fundaun-9a2290341/"
+                 target="_blank" rel="noopener"
+                 title="LinkedIn"
+                 class="social-icon">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- RIGHT COLUMN -->
-        <div class="col-lg-9">
-          <p>I am a Postdoctoral Research Fellow in the Department of Anesthesiology, Perioperative and Pain Medicine at Stanford University, supported by an NIH/NIDA T32 Fellowship in Interdisciplinary Research Training in Pain and Substance Use Disorders. I trained as a Doctor of Physical Therapy at Regis University and completed an Orthopaedic Physical Therapy Residency at Northwestern University–Shirley Ryan AbilityLab. I received my DPhil in Clinical Neurosciences from the University of Oxford with Annina Schmid and Georgios Baskozos. My doctoral research identified novel signs of peripheral nerve injury and neuropathic pain in whiplash-associated disorders. Alongside my research, I continue to practice clinically as a physical therapist at the Stanford Pain Management Center.</p>
+        <div class="col-lg-9 bio-text">
+          <p>I am a Postdoctoral Research Fellow in the Department of Anesthesiology, Perioperative and Pain Medicine at Stanford University, supported by an NIH/NIDA T32 Fellowship in Interdisciplinary Research Training in Pain and Substance Use Disorders. I trained as a Doctor of Physical Therapy at Regis University and completed an Orthopaedic Physical Therapy Residency at Northwestern University–Shirley Ryan AbilityLab. I received my DPhil in Clinical Neurosciences from the University of Oxford, where my doctoral research identified novel signs of peripheral nerve injury and neuropathic pain in whiplash-associated disorders. Alongside my research, I continue to practice clinically as a physical therapist at the Stanford Pain Management Center.</p>
 
           <p>My research focuses on the mechanisms and prognosis of neuropathic pain following traumatic head and neck injuries — including whiplash, spinal cord injury, and related conditions. Using MRI, quantitative sensory testing, neurological assessment, and blood-based biomarkers, I investigate why some individuals develop chronic pain after injury while others recover, and work to translate these findings into better tools for clinical assessment and treatment.</p>
         </div>
@@ -64,11 +85,9 @@
     </div>
   </main>
 
-  <footer class="border-top mt-5 py-4">
+  <footer class="py-4">
     <div class="container">
-      <p class="mb-0 text-muted" style="font-size:0.82rem;">
-        © 2025 Joel Fundaun &middot; Stanford University
-      </p>
+      <p class="mb-0">© 2025 Joel Fundaun · Stanford University</p>
     </div>
   </footer>
 
