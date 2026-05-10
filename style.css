@@ -58,9 +58,9 @@ a:hover { color: var(--navy-mid); text-decoration: underline; }
 }
 .nav-link {
   color: #555 !important;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  padding: 0.25rem 1rem !important;
+  padding: 0.25rem 0.6rem !important;
   transition: color 0.15s;
 }
 .nav-link:hover { color: var(--navy) !important; }
