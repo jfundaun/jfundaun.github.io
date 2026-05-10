@@ -9,22 +9,21 @@
 </head>
 <body>
 
-  <!-- NAVIGATION (copy to every page; move "active" to the current page's link) -->
-  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Joel Fundaun</a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto gap-lg-1">
           <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="engagement.html">Engagement</a></li>
         </ul>
       </div>
     </div>
@@ -32,26 +31,42 @@
 
   <main>
     <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-9">
 
-      <!-- Page header -->
-      <div class="row mb-2">
-        <div class="col-lg-8">
-          <h2 class="h4 fw-semibold mb-3" style="color: var(--navy);">Research</h2>
+          <h2 class="page-title">Research</h2>
+          <p class="page-subtitle">Neuropathic pain mechanisms following traumatic injury</p>
 
-          <!-- Overview paragraph -->
-          <p>Traumatic head and neck injuries are a leading cause of chronic neuropathic pain. These injuries affect overlapping regions of the nervous system, from peripheral nerves and dorsal root ganglia through to the spinal cord and brain.</p>
+          <p>Traumatic head and neck injuries — including whiplash, spinal cord injury, concussion, and traumatic brain injury — are a leading cause of chronic neuropathic pain. These injuries affect overlapping regions of the nervous system, from peripheral nerves and dorsal root ganglia through to the spinal cord and brain. A patient involved in a motor vehicle accident may sustain injury at several of these levels simultaneously, yet the mechanisms that determine whether they go on to develop chronic neuropathic pain remain poorly understood.</p>
 
-          <p>I study how injury to the nervous system across this spectrum leads to neuropathic pain, and why outcomes vary between patients. Using a deep phenotyping approach including MRI, quantitative sensory testing, neurological assessment, and blood-based measures. My ultimate aim is to better understand the mechanisms and underlying factors associated with chronic neuropathic pain after traumatic head and neck injury and to translate that understanding into better approaches to diagnosis and treatment.</p>
+          <p>We study how injury to the nervous system across this spectrum leads to neuropathic pain, and why outcomes vary so widely between patients. Using MRI, quantitative sensory testing, neurological assessment, and blood-based measures, we characterize the injury, profile its sensory consequences, and identify the factors that drive pain chronification.</p>
+
+          <div class="mt-4">
+
+            <div class="research-block">
+              <h3>Neuropathic pain and nerve injury after whiplash</h3>
+              <p>Whiplash-associated disorders (WAD) affect 20–50 million people globally each year, yet the mechanisms underlying persistent pain remain poorly understood. Most patients are classified as WAD grade II — meaning no frank nerve injury on routine testing — but our work has shown that a substantial subset harbor objective signs of peripheral nerve pathology and neuropathic pain. Using MR neurography of the brachial plexus and dorsal root ganglia, quantitative sensory testing, intraepidermal nerve fibre density, and serum neurofilament light chain, we have characterized the presence, temporal course, and prognostic significance of nerve injury in acute and chronic whiplash. A key finding from our prospective cohort study, published in <em>Brain</em>, is that two-thirds of people with acute WAD II have detectable signs of nerve pathology — challenging existing diagnostic classifications and with direct implications for clinical management.</p>
+            </div>
+
+            <div class="research-block">
+              <h3>Peripheral neuroinflammation and pain chronification</h3>
+              <p>Peripheral neuroinflammation — inflammation of intact but sensitized nerve tissue — is increasingly recognized as a contributor to persistent pain after traumatic injury, even in the absence of outright nerve damage. Our longitudinal cohort work has provided clinical evidence of peripheral neuroinflammation in acute whiplash, including elevated MRI T2 signal in the brachial plexus and dorsal root ganglia, heightened nerve mechanosensitivity, raised serum inflammatory mediators, and somatosensory hyperalgesia. We are investigating how these neuro-immune processes evolve from the acute to chronic stage, and whether early inflammatory profiles can predict which patients are at greatest risk of prolonged recovery.</p>
+            </div>
+
+            <div class="research-block">
+              <h3>Neuroimaging biomarkers and clinical translation</h3>
+              <p>A central goal of our research is to develop reliable, clinically useful tools for identifying individuals at risk of chronic neuropathic pain following traumatic injury. We use neuroimaging across the neuraxis — including simultaneous spinal cord and brain fMRI, MR neurography, and quantitative muscle MRI — alongside blood-based biomarkers and systematic integration of the existing literature through meta-analysis. Longer-term, this program aims to enable mechanistic phenotyping — identifying distinct biological subtypes within heterogeneous injury populations — to support more precise, targeted treatment strategies.</p>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="border-top mt-5 py-4">
+  <footer class="py-4">
     <div class="container">
-      <p class="mb-0 text-muted" style="font-size:0.85rem;">
-        © 2025 Joel Fundaun &middot; Stanford University
-      </p>
+      <p class="mb-0">© 2025 Joel Fundaun · Stanford University</p>
     </div>
   </footer>
 
